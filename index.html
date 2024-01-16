@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quantidade</title>
+    <style>
+      body {
+        margin: 40px 0 40px 0;
+        line-height: 1.5;
+        text-align: center;
+        background: black;
+        color: white;
+        font-size: large;
+      }
+    </style>
+    <script>
+      function calcular() {
+        let ppmin = document.getElementById("min").value;
+        let ppmax = document.getElementById("max").value;
+        let tempo = document.getElementById("qtdtempos").value;
+        let resultado = document.getElementById("resultado");
+        let resCalculo = (ppmax - ppmin + 1) * tempo;
+        resultado.innerHTML = `O seu resultado é ${resCalculo}`;
+      }
+    </script>
+  </head>
+  <body>
+    <span>Do Paciente: </span><input type="number" placeholder="PP-Min" id="min" />
+    <br />
+    <span>Ao paciente: </span>
+    <input type="number" placeholder="PP-Max" id="max" />
+    <br />
+    <span>Quantos tempos: </span>
+    <input type="number" placeholder="Tempo-Qtd" id="qtdtempos" />
+    <br />
+    <input type="submit" value="Calcular" onclick="calcular()" />
+    <p id="resultado">O seu resultado é: </p>
+  </body>
+</html>
